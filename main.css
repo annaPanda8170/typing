@@ -1,0 +1,748 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Courier';;
+}
+html {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+/* スタート画面 */
+.start{
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+  height: 100%;
+  position: relative;
+}
+.bigHeart{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+.bigHeartG{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+.message{
+  color: rgb(185, 144, 144);
+  display: none;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  width: 1000px;
+  z-index: 100;
+  letter-spacing: -3px;
+  font-size: 47px;
+  font-weight: 600;
+}
+.message2{
+  font-family: cursive;
+  color: rgba(182, 117, 117, 0.7);
+  display: none;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  width: 1000px;
+  z-index: 100;
+  letter-spacing: 7.5px;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+/* ゲーム画面 */
+body{
+  background-color: rgb(206, 198, 198);
+  height: 100%;
+}
+
+.question{
+  color: rgb(61, 43, 43);
+  text-align: center;
+  font-size: 88px;
+  font-weight: 600;
+  padding: 60px;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+
+.question span:nth-child(1){
+  color: red;
+}
+.keyboard{
+  font-size: 0;
+}
+.keyboard ul{
+  list-style: none;
+  margin: 2.5px auto;
+  text-align: center;
+  height: 50px;
+  width: 900px;
+  font-size: 0;
+}
+
+.keyboard li{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin: 0 4px;
+}
+.keyboard span, .keyboard .upS,.keyboard .downS{
+  border-radius: 10% 10%;
+  background: rgb(61, 43, 43);
+  height: 50px;
+  width: 50px;
+  display: inline-block; 
+  color: rgb(250, 161, 161);
+  font-size: 25px;
+  font-weight: 550;
+  line-height: 50px;
+  position: absolute;
+  top: 0px; 
+  left: 0px; 
+  opacity: 0;
+}
+.keyboard .font13{
+  letter-spacing: -2px;
+  font-size: 13px;   
+}
+.keyboard .backspace span, .keyboard .capslock span{
+  padding: 8px 0;
+}
+.keyboard .upS, .keyboard .downS{
+  line-height: 25px;
+  height: 25px;
+  display: block;
+}
+
+.keyboard .downS{
+  top: 25px; 
+}
+.keyboard .selectKey, .keyboard .f .keyboard .up, .keyboard .down, .keyboard .upS, .keyboard .downS{
+  width: 60px;
+}
+.keyboard .lngSelectKey{
+  width: 60px;
+}
+.keyboard .line2::after{
+  content: "";
+  display: inline-block;
+  width: 50px; 
+  height: 50px; 
+  margin: 0 4px;
+}
+.keyboard .key1, .keyboard .key1S, .keyboard .control{
+  width: 76px;
+}
+.keyboard .key1S{
+  top: -300px;
+  left: 1550px;
+  height: 120px;
+  width: 129px;
+  font-size: 30px;
+  line-height: 60px;
+}
+.keyboard .key2S{
+  top: -300px;
+  left: 1570px;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.keyboard .key3S{
+  top: 1550px;
+  left: 1550px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .key4S{
+  top: 1500px;
+  left: -300px;
+}
+.keyboard .key5S{
+  top: -300px;
+  left: -305px;
+}
+.keyboard .key6S{
+  top: 1500px;
+  left: -300px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .key7S{
+  top: 0px;
+  left: -150px;
+  height: 5000px;
+  width: 5000px;
+  font-size: 2500px;
+  line-height: 5000px;
+}
+.keyboard .key8S{
+  top: -300px;
+  left: -300px;
+  height: 150px;
+  width: 150px;
+  font-size: 75px;
+  line-height: 150px;
+
+}
+.keyboard .key9S{
+  top: 1500px;
+  left: 1550px;
+  height: 25px;
+  width: 25px;
+  font-size: 12.5px;
+  line-height: 25px;
+}
+.keyboard .key0S{
+  top: -300px;
+  left: -300px;
+}
+.keyboard .hyphenS{
+  top: 28950px;
+  left: 0px;
+}
+.keyboard .symbol1S{
+  top: -300px;
+  left: 1000px;
+}
+.keyboard .symbol2S{
+  top: -3550px;
+  left: -5600px;
+  height: 25px;
+  width: 25px;
+  font-size: 12.5px;
+  line-height: 25px;
+}
+.keyboard .backspaceS{
+  top: 400px;
+  left: -6400px;
+}
+.keyboard .tabS{
+  top: 3000px;
+  left: 0px;
+  height: 90px;
+  width: 90px;
+  font-size: 23.4px;
+  line-height: 90px;
+}
+.keyboard .qS{
+  top: -300px;
+  left: -6050px;
+  height: 500px;
+  width: 500px;
+  font-size: 25px;
+  line-height: 50px;
+}
+.keyboard .wS{
+  top: -3670px;
+  left: 1000px;
+}
+.keyboard .eS{
+  top: -5050px;
+  left: 1560px;
+}
+.keyboard .rS{
+  top: -17600px;
+  left: -1300px;
+}
+.keyboard .tS{
+  top: 200px;
+  left: 15500px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .yS{
+  top: 1400px;
+  left: 0px;
+  height: 100px;
+  width: 100px;
+  font-size: 50px;
+  line-height: 100px;
+}
+.keyboard .uS{
+  top: -27500px;
+  left: -8700px;
+  height: 2500px;
+  width: 2500px;
+  font-size: 1250px;
+  line-height: 2500px;
+}
+.keyboard .iS{
+  top: -4200px;
+  left: -340px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .oS{
+  top: -3500px;
+  left: -13500px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .pS{
+  top: -4700px;
+  left: 2400px;
+}
+.keyboard .symbol10S{
+  top: 12050px;
+  left: -500px;
+}
+.keyboard .symbol11S{
+  top: -300px;
+  left: -14500px;
+}
+.keyboard .enterS{
+  top: 378px;
+  left: 2500px;
+  height: 1045px;
+  width: 530px;
+  font-size: 80px;
+  line-height: 500px;
+}
+.keyboard .controlS{
+  top: 2500px;
+  left: -4300px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .aS{
+  top: -54500px;
+  left: -1000px;
+}
+.keyboard .sS{
+  top: 3000px;
+  left: 43500px;
+}
+.keyboard .dS{
+  top: 15700px;
+  left: 1500px;
+}
+.keyboard .fS{
+  top: -700px;
+  left: -25400px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .gS{
+  top: -2300px;
+  left: -2300px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .hS{
+  top: -700px;
+  left: -700px;
+  height: 250px;
+  width: 250px;
+  font-size: 125px;
+  line-height: 250px;
+}
+.keyboard .jS{
+  top: -500px;
+  left: 5650px;
+}
+.keyboard .kS{
+  top: -800px;
+  left: 0px;
+}
+.keyboard .lS{
+  top: 3000px;
+  left: 1750px;
+}
+.keyboard .symbol3S{
+  top: 3400px;
+  left: 34500px;
+  height: 500px;
+  width: 500px;
+  font-size: 250px;
+  line-height: 500px;
+}
+.keyboard .symbol4S{
+  top: 3000px;
+  left: -5600px;
+  height: 50px;
+  width: 50px;
+  font-size:25px;
+  line-height: 50px;
+}
+.keyboard .symbol5S{
+  top: 1555px;
+  left: 1555px;
+  height: 50px;
+  width: 50px;
+  font-size:25px;
+  line-height: 50px;
+}
+.keyboard .zS{
+  top: 45500px;
+  left: 1000px;
+}
+.keyboard .xS{
+  top: 905px;
+  left: -8500px;
+}
+.keyboard .cS{
+  top: 1200px;
+  left: 150px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.keyboard .vS{
+  top: 3500px;
+  left: -57050px;
+}
+.keyboard .bS{
+  top: 3000px;
+  left: 1000px;
+  height: 150px;
+  width: 150px;
+  font-size: 75px;
+  line-height: 150px;
+}
+.keyboard .nS{
+  top: 600px;
+  left: -1350px;
+  height: 150px;
+  width: 150px;
+  font-size: 75px;
+  line-height: 150px;
+}
+.keyboard .mS{
+  top: -800px;
+  left: -8050px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .symbol6S{
+  top: -7400px;
+  left: 32050px;
+}
+.keyboard .symbol7S{
+  top: -100px;
+  left: 4500px;
+}
+.keyboard .symbol8S{
+  top: 40050px;
+  left: 1000px;
+}
+.keyboard .symbol9S{
+  top: -6500px;
+  left: 1000px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .shiftS{
+  top: 3200px;
+  left: -34550px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .capslockS{
+  top: 3000px;
+  left: 1000px;
+}
+.keyboard .optionS{
+  top: -3000px;
+  left: -10500px;
+}
+.keyboard .commandS{
+  top: 3000px;
+  left: 1000px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.keyboard .lngSelectKeyS{
+  top: 500px;
+  left: 15560px;
+  height: 5120px;
+  width: 6144px;
+  line-height: 5120px;
+  font-size: 1331px;
+}
+.keyboard .spaceS{
+  top: 900px;
+  left: 0px;
+}
+.keyboard .fnS{
+  top: -6050px;
+  left: -2400px;
+}
+.keyboard .selectKeyS{
+  top: -900px;
+  left: -3500px;
+}
+.keyboard .upS{
+  top: -54500px;
+  left: -1000px;
+}
+.keyboard .downS{
+  top: -900px;
+  left: 1000px;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.keyboard .shift{
+  width: 92px;
+}
+.keyboard .command{
+  width: 69px;
+}
+
+.keyboard .space{
+  width: 162px; /* 納得してないが8px増やしている */
+}
+
+.keyboard .enter{
+  height: 104.5px;
+  width: 53px;
+  margin-left: 27px;
+}
+
+
+
+
+
+/* イナズマ */
+.inazuma{
+  position: relative;
+  z-index: 10;
+}
+.inazumaA{
+  position: absolute;
+  top: -42px;
+  left: 16px;
+  width: 20px;
+  height: 10px;
+  transform: skewX(-38deg) skewY(-10deg);
+  border-top: 20px solid rgb(206, 198, 198);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.inazumaB{
+  position: absolute;
+  left: -3px;
+  top: -27px;
+  width: 24px;
+  height: 10px;
+  transform: skewX(-53deg) skewY(-6deg);
+  border-top: 30px solid rgb(206, 198, 198);
+  border-left: 18px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* ハート */
+
+.heart {
+  width: 50px;
+  height: 45px;
+  position: relative;
+}
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";  
+  left: 25px;
+  top: 3px;
+  width: 28px;  
+  height: 45px;  
+  background: red;  
+  border-radius: 50% 50% 0 0/31.3% 31.3% 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  z-index: -10;
+}
+.heart::after {
+  left: -3px;
+  background: red;
+  transform: rotate(45deg);
+  transform-origin :100% 100%;
+}
+
+/* イナズマ大 */
+.inazumaBig{
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 46px;
+  left: 930px;
+  transform: skewX(-40deg) skewY(-10deg);
+  z-index: 1000;
+}
+.inazumaBigA{
+  position: absolute;
+  width: 115px;
+  height: 100px;
+  transform: skewX(-10deg);
+  border-top: 180px solid rgb(49, 40, 2);
+  border-left: 7px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.inazumaBigB{
+  position: absolute;
+  top: 120px;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: skewX(-7deg);
+  border-top: 200px solid rgb(49, 40, 2);
+  border-left: 7px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.inazumaBigC{
+  position: absolute;
+  top: 299px;
+  left: -99px;
+  width: 100px;
+  height: 150px;
+  border-top: 350px solid rgb(49, 40, 2);
+  border-right: 100px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+/* イナズマ中 */
+.inazumaMiddle{
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 470px;
+  left: 790px;
+  transform: rotate(50deg) skewX(0deg) skewY(0deg);
+  z-index: 1000;
+}
+.inazumaMiddleA{
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  transform: skewX(-10deg);
+  border-top: 160px solid rgba(0, 0, 0, .5);
+  border-left: 7px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.inazumaMiddleB{
+  position: absolute;
+  top: 115px;
+  left: -35px;
+  width: 40px;
+  height: 30px;
+  transform: skewX(-7deg);
+  border-top: 130px solid rgba(0, 0, 0, .5);
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.inazumaMiddleC{
+  position: absolute;
+  top: 200px;
+  left: -60px;
+  width: 30px;
+  height: 40px;
+  border-top: 150px solid rgba(0, 0, 0, .5);
+  border-right: 40px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* ビッグハート赤 */
+
+.bigHeart {
+  width: 500px;
+  height: 450px;
+  position: relative;
+}
+.bigHeart::before,
+.bigHeart::after {
+  position: absolute;
+  content: "";  
+  left: 250px;
+  top: 5px;
+  width: 280px;  
+  height: 450px;  
+  background: rgb(170, 28, 28);  
+  border-radius: 50% 50% 0 0/31.3% 31.3% 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  z-index: -10;
+}
+.bigHeart::after {
+  left: -30px;
+  background: rgb(170, 28, 28);
+  transform: rotate(45deg);
+  transform-origin :100% 100%;
+}
+
+/* ビッグハート緑 */
+
+.bigHeartG {
+  width: 600px;
+  height: 540px;
+  position: relative;
+}
+.bigHeartG::before,
+.bigHeartG::after {
+  position: absolute;
+  content: "";  
+  left: 300px;
+  top: 6px;
+  width: 336px;  
+  height: 540px;  
+  background: rgb(10, 77, 73);  
+  border-radius: 50% 50% 0 0/31.3% 31.3% 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  z-index: -8;
+}
+.bigHeartG::after {
+  left: -36px;
+  background: rgb(10, 77, 73);
+  transform: rotate(45deg);
+  transform-origin :100% 100%;
+}
