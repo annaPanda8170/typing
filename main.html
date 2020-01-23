@@ -8,16 +8,24 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"> --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./main.js"></script>
-  <title>Let's Typing!</title>
+  <title>Let's CSS Typing!</title>
+  <meta name="twitter:card" content="summary" /> <!--①-->
+  <meta name="twitter:site" content="@annaPanda8170" /> <!--②-->
+  <meta property="og:url" content="http://css-typing.com/" /> <!--③-->
+  <meta property="og:title" content="CSS Typing" /> <!--④-->
+  <meta property="og:description" content="CSSのプロパティでタイピングトレーニング！" /> <!--⑤-->
+  <meta property="og:image" content="http://css-typing.com/680762a05908b717962204abf897d44f-1.png" /> <!--⑥-->
 </head>
-<body>
+<body class="body">
+  <!-- 最初の画面 -->
   <div class="start">
-    <div class="message">press the Enter key</div>
-    <div class="message2">press the Enter key</div>
+    <div class="message">I'm CSS Typing!<br>&nbsp;&nbsp;&nbsp;Press the Enter key</div>
+    <div class="message2">I'm CSS Typing!<br>&nbsp;&nbsp;&nbsp;Press the Enter key</div>
     <div class="bigHeart"></div>
     <div class="inazumaBig"><div class="inazumaBigA"></div><div class="inazumaBigB"></div><div class="inazumaBigC"></div></div>
-    <div class="inazumaMiddle"><div class="inazumaMiddleA"></div><div class="inazumaMiddleB"></div><div class="inazumaMiddleC"></div></div>
+    
   </div>
+  <!-- タイピング画面 -->
   <div class="background">
     <div class="question"></div>
     <div class="keyboard">
@@ -88,7 +96,7 @@
         ­­­­­­­­<li class="option"><span class="font13 optionS">option</span></li>
         ­­­­­­­­<li class="command"><span class="font13 commandS">command</span></li>
         <li class="lngSelectKey"><span class="font13 lngSelectKeyS">英数</span></li>
-        ­­­­­­­­<li class="space"><span class="font13 spaceS">Space</span></li>
+        ­­­­­­­­<li class="space"><span class="font13 spaceS timer">Space</span></li>
         ­­­­­­­­<li class="lngSelectKey"><span class="font13 lngSelectKeyS">かな</span></li>
         ­­­­­­­­<li class="command"><span class="font13 commandS">command</span></li>
         ­­­­­­­­<li class="fn"><span class="font13 fnS">fn</span></li>
@@ -96,6 +104,13 @@
         ­­­­­­­­<li class="nonBorder up down"><div class="38 upS">▲</div><div class="40 downS">▼</div></li>
         ­­­­­­­­<li class="selectKey"><span class="39 selectKeyS">▶︎</span></li>
       </ul>­­­­­­­
+    </div>
+  </div>
+  <div class="end">
+    <div class="endContainer">
+      <div class="points"></div>
+      <div class="reload">If you want to challenge again,</div>
+      <div class="reload">Please press the Enter key!</div>
     </div>
   </div>
 </body>
